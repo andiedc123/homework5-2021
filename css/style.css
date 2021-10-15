@@ -73,12 +73,13 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: relative;
+  position: absolute;
   bottom: 40px;
 }
 
 .skip a:focus{
-  bottom: 0;
+  position: relative;
+  top: 0;
 }
 
 
@@ -91,7 +92,7 @@ a:focus{
 .container{
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(5) auto;
+  grid-template-rows: auto auto auto auto auto;
   row-gap: 15px;
 }
 
@@ -103,9 +104,10 @@ header{
   background-size: cover !important; /* Parallax effect */
   color: white;
   height: 400px; /* Parallax effect */
-  grid-column: 1 / span 3;
+  grid-column: 1 / -1;
   grid-row: 1 / span 1;
   background-image: url(../images/header.jpg) !important;
+  background-repeat: none;
 }
 
 
@@ -175,7 +177,7 @@ header{
   .container{
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: repeat(5) 400px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
   }
 
   
